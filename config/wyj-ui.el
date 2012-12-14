@@ -1,4 +1,4 @@
-;; -*- coding: utf-8 -*-
+; -*- coding: utf-8 -*-
 (require 'wyj-utils)
 
 ;; Color Theme
@@ -24,41 +24,45 @@
 
 ;; Linux下
 ;; 全屏
-(defun my-fullscreen ()
-  (interactive)
-  (x-send-client-message
-   nil 0 nil "_NET_WM_STATE" 32
-   '(2 "_NET_WM_STATE_FULLSCREEN" 0)))
-(global-set-key [f6] 'my-fullscreen)
-;; 启动时全屏
-(my-fullscreen)
+(if wyj/host:ubuntup
+    (defun my-fullscreen ()
+      (interactive)
+      (x-send-client-message
+       nil 0 nil "_NET_WM_STATE" 32
+       '(2 "_NET_WM_STATE_FULLSCREEN" 0)))
+  (global-set-key [f6] 'my-fullscreen)
+  ;; 启动时全屏
+  ;; (my-fullscreen)   ;;自定义函数不能放在if语句里？
+  )
 
 ;;最大化
-(defun my-maximized-horz ()
-  (interactive)
-  (x-send-client-message
-   nil 0 nil "_NET_WM_STATE" 32
-   '(1 "_NET_WM_STATE_MAXIMIZED_HORZ" 0)))
-(defun my-maximized-vert ()
-  (interactive)
-  (x-send-client-message
-   nil 0 nil "_NET_WM_STATE" 32
-   '(1 "_NET_WM_STATE_MAXIMIZED_VERT" 0)))
-(defun my-maximized ()
-  (interactive)
-  (x-send-client-message
-   nil 0 nil "_NET_WM_STATE" 32
-   '(1 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
-  (interactive)
-  (x-send-client-message
-   nil 0 nil "_NET_WM_STATE" 32
-   '(1 "_NET_WM_STATE_MAXIMIZED_VERT" 0)))
-;; 启动时最大化
-;; (my-maximized)
+(if wyj/host:ubuntup
+    (defun my-maximized-horz ()
+      (interactive)
+      (x-send-client-message
+       nil 0 nil "_NET_WM_STATE" 32
+       '(1 "_NET_WM_STATE_MAXIMIZED_HORZ" 0)))
+  (defun my-maximized-vert ()
+    (interactive)
+    (x-send-client-message
+     nil 0 nil "_NET_WM_STATE" 32
+     '(1 "_NET_WM_STATE_MAXIMIZED_VERT" 0)))
+  (defun my-maximized ()
+    (interactive)
+    (x-send-client-message
+     nil 0 nil "_NET_WM_STATE" 32
+     '(1 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
+    (interactive)
+    (x-send-client-message
+     nil 0 nil "_NET_WM_STATE" 32
+     '(1 "_NET_WM_STATE_MAXIMIZED_VERT" 0)))
+  ;; 启动时最大化
+  ;; (my-maximized)
+  )
 
 
 ;;Win下的全屏
-(if wyj/os:windowsp
+(if wyj/host:HOMEp
     (w32-send-sys-command 61488))
 
 
