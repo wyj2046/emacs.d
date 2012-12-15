@@ -21,7 +21,9 @@
 (autoload 'python-mode "python-mode" "Python Mode." t)
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
+
 (require 'python-mode)
+;; 制定Python版本号通过参考python-mode的INSTALL文档，用M-x customize-variable py-shell-name实现
 (add-hook 'python-mode-hook
       (lambda ()
  (set-variable 'py-indent-offset 4)
@@ -32,6 +34,7 @@
  ;(setq yas/after-exit-snippet-hook 'indent-according-to-mode)
  (smart-operator-mode-on)
  ))
+
 ;; ;; pymacs
 ;; ;; (setenv "PYMACS_PYTHON" "python3.2")
 ;; ;; (setq py-load-pymacs-p nil)
