@@ -276,6 +276,7 @@ s1 ",\n" s2 "};"
     (indent-hint-init l)
     (dolist (x lst)
       (indent-hint (car x) c (cadr x)))))
+(global-set-key (kbd "C-c i") 'indent-hint-mode) ;绑定缩进提示线快捷键为C-c i
 
 ;; example
 (defun indent-hint-lisp ()
