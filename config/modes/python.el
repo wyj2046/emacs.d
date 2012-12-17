@@ -35,6 +35,10 @@
  (smart-operator-mode-on)
  ))
 
+(add-hook 'python-mode-hook 'whitespace-mode)    ;; 这两句用来在开启python-mode中自动加载whitspace和缩进线
+(add-hook 'python-mode-hook 'indent-hint-mode)
+(add-hook 'python-mode-hook 'my-fullscreen)
+
 ;; ;; pymacs
 ;; ;; (setenv "PYMACS_PYTHON" "python3.2")
 ;; ;; (setq py-load-pymacs-p nil)

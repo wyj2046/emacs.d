@@ -9,14 +9,14 @@
 ;; (require 'color-theme-ahei)
 ;; (color-theme-ahei)
 
-(require 'color-theme-subdued)
-(color-theme-subdued)
+;; (require 'color-theme-subdued)
+;; (color-theme-subdued)
 
 ;; (require 'color-theme-blackboard)
 ;; (color-theme-blackboard)
 
-;; (require 'color-theme-molokai)
-;; (color-theme-molokai)
+(require 'color-theme-molokai)
+(color-theme-molokai)
 
 ;; (color-theme-initialize)  ;;对于内置theme，要加这句话
 ;; (color-theme-blue-mood)
@@ -34,6 +34,7 @@
   ;; 启动时全屏
   ;; (my-fullscreen)   ;;自定义函数不能放在if语句里？
   )
+
 
 ;;最大化
 (if wyj/host:ubuntup
