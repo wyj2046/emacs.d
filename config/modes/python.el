@@ -37,7 +37,7 @@
 
 (add-hook 'python-mode-hook 'whitespace-mode)    ;; 这两句用来在开启python-mode中自动加载whitspace和缩进线
 (add-hook 'python-mode-hook 'indent-hint-mode)
-(add-hook 'python-mode-hook 'my-fullscreen)
+;; (add-hook 'python-mode-hook 'my-fullscreen)    ;;这种方式不好，每次新打开一个python都要切换
 
 ;; ;; pymacs
 ;; ;; (setenv "PYMACS_PYTHON" "python3.2")
