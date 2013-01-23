@@ -32,7 +32,7 @@
        '(2 "_NET_WM_STATE_FULLSCREEN" 0)))
   (global-set-key [f6] 'my-fullscreen)
   ;; 启动时全屏
-  (my-fullscreen)   ;;自定义函数不能放在if语句里？
+  (my-fullscreen)
   )
 
 
