@@ -63,8 +63,8 @@
 
 
 ;;Win下的全屏
-(if wyj/host:HOMEp
-    (w32-send-sys-command 61488))
+;; (if wyj/host:HOMEp
+;;     (w32-send-sys-command 61488))
 
 
 ;; setup startup window size
@@ -77,7 +77,9 @@
   (defun wyj/w32-maximize-frame ()
     "Maximize the current frame"
     (interactive)
-    (w32-send-sys-command 61488)))
+    (w32-send-sys-command 61488))
+  (wyj/w32-maximize-frame)    ;; 启动时最大化
+  )
 
 
 ;; ;; idle use zone mode
@@ -89,4 +91,4 @@
 ;; (setq zone-programs (remq 'zone-pgm-stress-destress zone-programs))
 ;; (setq zone-programs (remq 'zone-pgm-dissolve zone-programs))
 
-(provide 'wyj-UI)
+(provide 'wyj-ui)
