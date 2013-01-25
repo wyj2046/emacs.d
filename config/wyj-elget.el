@@ -24,3 +24,10 @@
 (require 'golden-ratio)
 
 (golden-ratio-enable)
+
+
+;; jedi
+;; http://tkf.github.com/emacs-jedi/
+;; 擦，还不知道怎么玩
+(setq jedi:setup-keys t)
+(add-hook 'python-mode-hook 'jedi:setup)
