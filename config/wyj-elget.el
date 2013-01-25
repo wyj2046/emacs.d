@@ -7,6 +7,7 @@
 ;; Basic Setup
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
+;; el-get必须上网才能使？
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -14,4 +15,12 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
+
 (el-get 'sync)
+
+
+;; golden-ratio
+;; https://github.com/roman/golden-ratio.el
+(require 'golden-ratio)
+
+(golden-ratio-enable)
