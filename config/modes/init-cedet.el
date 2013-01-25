@@ -2,7 +2,7 @@
 
 ;; 参考CEDET官方安装说明, Meteor Liu, winterTT
 ;; http://emacser.com/cedet.htm
-(load-file "~/.emacs.d/plugins/cedet-1.1/common/cedet.el")
+;; (load-file "~/.emacs.d/plugins/cedet-1.1/common/cedet.el")
 (require 'semanticdb-global)
 (semanticdb-enable-gnu-global-databases 'c-mode)
 (semanticdb-enable-gnu-global-databases 'c++-mode)

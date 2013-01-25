@@ -213,3 +213,11 @@ the mode-line."
 (global-set-key (kbd "<f1> 1") 'lookup-google)
 (global-set-key (kbd "<f1> 2") 'lookup-wikipedia)
 (global-set-key (kbd "<f1> 3") 'lookup-word-definition)
+
+
+;; weibo
+;; http://emacser.com/weibo.htm
+;; weibo和CEDET有冲突，暂时先放到这，同时注释掉init-cedet这句话
+(load-file "~/.emacs.d/plugins/cedet-1.1/common/cedet.el")
+(wyj/plugin:prepend-to-load-path "weibo")
+(require 'weibo)
