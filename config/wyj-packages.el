@@ -200,6 +200,13 @@ the mode-line."
 (global-set-key (kbd "C->") 'mark-next-like-this)
 (global-set-key (kbd "C-M-m") 'mark-more-like-this) ; like the other two, but takes an argument (negative is previous)
 
+;; google-translate
+(load-file "~/.emacs.d/plugins/cedet-1.1/common/cedet.el")
+
+(require 'google-translate)
+(global-set-key "\C-ct" 'google-translate-at-point)
+(global-set-key "\C-cT" 'google-translate-query-translate)
+
 
 ;; xah_lee
 ;; lookup-word-on-internet
@@ -218,6 +225,6 @@ the mode-line."
 ;; weibo
 ;; http://emacser.com/weibo.htm
 ;; weibo和CEDET有冲突，暂时先放到这，同时注释掉init-cedet这句话
-(load-file "~/.emacs.d/plugins/cedet-1.1/common/cedet.el")
+;; (load-file "~/.emacs.d/plugins/cedet-1.1/common/cedet.el")
 (wyj/plugin:prepend-to-load-path "weibo")
 (require 'weibo)
