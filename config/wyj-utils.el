@@ -12,8 +12,8 @@
 			     (getenv "PROGRAMW6432"))
   "if current operation system is windows 64bit verison")
 
-(defconst wyj/host:HOMEp (string-equal system-name "RAPID-THINK")
-  "if the current host is my laptop")
+(defconst wyj/host:HOMEp (string-equal system-name "SINA-PC")
+  "if the current host is my SINA-PC")
 
 (defconst wyj/host:ubuntup (string-equal system-name "wyj-ThinkPad-X201")
   "if the current host is wyj-ThinkPad-X201")

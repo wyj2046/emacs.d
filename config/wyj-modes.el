@@ -61,4 +61,11 @@
 ;; 边框提供特殊符号 Meteor帮助
 (setq-default indicate-buffer-boundaries (quote left))
 
+
+;; php-mode
+(autoload 'php-mode "php-mode" "Major mode for editing php code." t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
+
+
 (provide 'wyj-modes)
